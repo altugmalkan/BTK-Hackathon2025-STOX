@@ -1,0 +1,58 @@
+# Logging Configuration for Stox Image Service
+# This file can be used to customize logging behavior
+
+# Default log level for the application
+default_level: INFO
+
+# Log levels for specific components
+loggers:
+  grpc_server: INFO
+  image_service: INFO
+  test_client: INFO
+  grpc_server_main: INFO
+
+# Console output settings
+console:
+  enabled: true
+  level: INFO
+  colored: true
+  format: "%(asctime)s | %(levelname)s | %(name)s | %(message)s"
+  date_format: "%H:%M:%S"
+
+# File logging settings
+file:
+  enabled: true
+  level: DEBUG
+  format: "%(asctime)s | %(name)s | %(levelname)s | %(filename)s:%(lineno)d | %(funcName)s | %(message)s"
+  date_format: "%Y-%m-%d %H:%M:%S"
+  
+  # Main log file
+  main:
+    filename: "logs/stox_image_service.log"
+    max_bytes: 10485760  # 10MB
+    backup_count: 5
+    
+  # Error log file
+  errors:
+    filename: "logs/stox_image_service_errors.log"
+    max_bytes: 5242880   # 5MB
+    backup_count: 3
+    
+  # Performance log file
+  performance:
+    filename: "logs/stox_image_service_performance.log"
+    max_bytes: 5242880   # 5MB
+    backup_count: 3
+
+# Performance monitoring settings
+performance:
+  enabled: true
+  log_api_calls: true
+  log_processing_times: true
+  log_file_operations: true
+
+# Error reporting settings
+error_reporting:
+  include_stack_traces: true
+  log_unhandled_exceptions: true
+  capture_context: true 

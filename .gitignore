@@ -1,0 +1,87 @@
+# Environment files
+.env
+.env.*
+!.env.example
+
+# API Keys and secrets
+**/docker-compose.yml
+**/docker-compose.override.yml
+docker-compose.production.yml
+**/config.yaml
+
+# Test files with hardcoded keys
+**/test-real-*.sh
+**/test-*-real.sh
+
+# AWS credentials
+**/.aws/
+**/aws-credentials.json
+**/localstack-data/
+
+# Database
+**/postgres_data/
+**/*.db
+**/*.sqlite
+
+# Logs
+**/logs/
+**/*.log
+**/npm-debug.log*
+**/yarn-debug.log*
+**/yarn-error.log*
+
+# Dependencies
+**/node_modules/
+**/__pycache__/
+**/*.pyc
+**/*.pyo
+**/*.pyd
+.Python
+**/venv/
+**/env/
+**/.venv/
+
+# Build outputs
+**/dist/
+**/build/
+**/target/
+**/bin/
+**/*.exe
+**/*.dll
+**/*.so
+**/*.dylib
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Go specific
+**/go.sum
+**/vendor/
+
+# Python specific
+**/*.egg-info/
+**/.pytest_cache/
+**/.coverage
+
+# Node.js specific
+**/package-lock.json
+**/yarn.lock
+
+# Temporary files
+**/tmp/
+**/temp/
+**/.cache/
+
+# Backup files
+**/*.backup
+**/*.bak
+**/*.orig
+stox-gateway/.env

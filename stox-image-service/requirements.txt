@@ -1,0 +1,5 @@
+google-cloud-aiplatform
+google-genai
+protobuf>=4.21.6,<5.0dev
+grpcio==1.60.0
+grpcio-tools==1.60.0
